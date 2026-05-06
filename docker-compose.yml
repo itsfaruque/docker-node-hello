@@ -7,7 +7,7 @@ services:
     restart: always
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.hello_node.rule=Host(`bosnam.com`)"
+      - "traefik.http.routers.hello_node.rule=Host(`bodnam.com`)"
       - "traefik.http.routers.hello_node.entrypoints=websecure"
       - "traefik.http.routers.hello_node.tls.certresolver=letsencrypt"
       - "traefik.http.services.hello_node.loadbalancer.server.port=3000"
@@ -16,4 +16,3 @@ services:
 
 networks:
   traefik-proxy:
-    external: true
